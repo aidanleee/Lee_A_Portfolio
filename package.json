@@ -1,0 +1,23 @@
+{
+  "name": "lee_a_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidanleee/Lee_A_Portfolio.git"
+  },
+  "author": "Aidan Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidanleee/Lee_A_Portfolio/issues"
+  },
+  "homepage": "https://github.com/aidanleee/Lee_A_Portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
