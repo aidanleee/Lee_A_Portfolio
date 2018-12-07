@@ -1,3 +1,290 @@
-@include '_vars';
+// import variables
+@import 'modules/vars';
 
-// insert styling below
+// rules
+.hide {
+    display: none;
+}
+
+.boxhelper {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2 h3{
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+// Header
+header {
+	background: url(../images/promo-opacity.jpg) no-repeat center fixed;
+	background-size: cover;
+	height: 480px;
+}
+
+#logobar {
+	height: 50px;
+    margin-bottom: 0px;
+    background-color: $white;
+}
+
+#logo {
+	float: left;
+    img {
+        height: 30px;
+        margin-top: 10px;
+    }
+}
+
+#mainNav {
+	float: right;
+    img {
+        height:26px;
+        margin-top: 12px;
+        cursor: pointer;
+
+    }
+}
+
+#text {
+    color: #fff;
+    margin-top: 30px;
+    h2 {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+    p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
+
+.buttons {
+    margin-top: 0px;
+    a{
+        border: 1px solid $white;
+        color: $white;
+        text-align: center;
+        width: 80px;
+        height: 30px;
+        line-height: 27px;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $hover;
+        border-color: $hover;
+        transition: 0.5s;
+    }
+}
+
+.fl {
+    float:left;
+}
+
+.fr {
+    float: right;
+}
+
+#arrow {
+    text-align: center;
+    margin-top: 30px;
+    
+    img {
+        height: 30px;
+    }
+}
+
+// Side Nav
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.closebtn {
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+// Main Nav
+
+// Portfolio
+#portfolio-section {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.img-cont {
+    position: relative;
+    margin-top: 30px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background: rgba(0, 0, 0, 0.72);
+  }
+
+  .img-cont:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img-title {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .img-button {
+    color: white;
+    font-size: 16px;
+    border: 1px solid $white;
+    height: 34px;
+    width: 150px;
+    text-align: center;
+    line-height: 28px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .img-button:hover {
+    color: $hover;
+    transition: 0.5s;
+    border-color: $hover;
+}
+
+// About
+#about {
+    height: 500px;
+    background-color: #d7d7d7d7;
+}
+
+// Contact
+#contact-section {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#contact-title {
+    text-align: center;
+    
+
+}
+
+#form {
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}
+
+#input-bttn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#submit {
+	border: 2px solid black;
+	color: $hover;
+	height: 30px;
+    width: 150px;
+    text-align: center;
+    background:none;
+    font-weight: bold;
+}
+
+#submit:hover {
+	border-color: $hover;
+    color: $hover;
+    transition: 0.3s;
+}
+
+// Footer
+footer {
+    background-color: $white;
+}
+
+#mainFooter {
+    a {
+        margin-top: 20px;
+    }
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
