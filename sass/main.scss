@@ -248,7 +248,7 @@ header {
 
 #submit {
 	border: 2px solid black;
-	color: $hover;
+	color: black;
 	height: 30px;
     width: 150px;
     text-align: center;
@@ -287,4 +287,33 @@ footer {
     margin-top: 20px;
     text-align: center;
     font-size: 12px;
+}
+
+// Media Queries
+
+// Mobile
+@media (max-width: 575.98px) {
+
+}
+
+// Tablet
+@media (min-width: 576px) {
+    #text {
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    .buttons {
+        a {
+            width: 120px;
+            height:30px;
+        }
+    }
+    
+}
+
+//Desktop
+@media (min-width: 992px) {
+
 }
