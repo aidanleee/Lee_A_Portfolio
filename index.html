@@ -57,65 +57,64 @@
             <img src="images/arrow.png" alt="Down Arrow Icon">
         </a>
     </header>
-    
 
+    <!-- Portfolio Section w/ array -->
     <section id="portfolio-section" class="row">
         <h2 class="hide">Portfolio Section</h2>
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images/organdonation.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Organ Donation</h3>
-                <span class="img-button">See More</span>
-            </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images/aa.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Admiral Adventures</h3>
-                <span class="img-button">See More</span>
-            </div>
-        </div>
-    
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images/ledc.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Digital Forrest</h3>
-                <span class="img-button">See More</span>
-            </div>
-        </div>
-    
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images/ocean.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Group Ocean</h3>
-                <span class="img-button">See More</span>
-            </div>
-        </div>
-    
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images//audi.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Audi</h3>
-                <span class="img-button">See More</span>
-            </div>
-        </div>
+        <ul class="col-12">
+            <li v-for="portfolio in portfoliodata" class="col-12 col-sm-6 col-lg-4 img-cont">
+                <img :src="'images/' + portfolio.pro_thumn" alt="Project Preview" class="image">
+                <div class="overlay">
+                    <h3 class="img-title">{{ projectitle }}</h3>
+                    <span :data-project="tbl_project" v-on:click="showLightBox" class="img-button">See More</span>
+                </div>
+            </li>
+        </ul>
 
-        <div class="col-12 col-sm-6 col-lg-4 img-cont">
-            <img src="images/peter.jpg" alt="" class="image">
-            <div class="overlay">
-                <h3 class="img-title">Peter Designs</h3> <!-- Dyamic -->
-                <span class="img-button">See More</span>
-            </div>
-        </div>
     </section>
 
+    <!-- Lightbox -->
+    <div id="lightbox-container" class="row">
+        <div class="lightbox" class="col-12" v-for="portfolio in portfoliodata">
+            <span class="close-lightbox" v-on:click="closeLightBox">x</span>
+            <h2>{{ projecttitle }}</h2>
+            <h3>dickhole</h3>
+            <p>{{ projectdescription }}</p>
+            <img :src="'images/' + portfolio.pro_thumn" alt="Project Image">
+        </div>
+    </div>
 
-
+    <hr>
 
     <section id="about" class="row">
-        <h2>About Me</h2>
+        <div class="col-12">
+            <h2>About Me</h2>
+        </div>
+        <div id="about-text" class="col-12 col-lg-10 offset-lg-1">
+            <p>{{ abouttext }}</p>
+        </div>
+
+        <div id="line" class="col-6 offset-3">
+            <hr>
+        </div>
+
+        <div id="about-img" class="col-12 col-lg-6 offset-lg-3">
+            <img src="images/headshot.png" alt="">
+        </div>
+
+
+        
+        
+
     </section>
+
+
+
+
+
+
+
 
 
 
@@ -131,7 +130,7 @@
 
     <section id="contact-section" class="row">
         <div id="contact-title" class="col-12">
-            <h2>{{ contacttitle }}</h2>
+            <h2>Contact Me</h2>
             <hr>
         </div>
         <form id="form" action="contact.php" method="post" class="col-12 col-lg-8 offset-lg-2">

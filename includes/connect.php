@@ -1,11 +1,11 @@
 <?php
-$user = "root";
-$pass = "root";
-$url = "localhost";
-$db = "db_portfolio";
-$link = mysqli_connect($url, $user, $pass, $db, "8888");
-if(mysqli_connect_errno()) {
-	printf("Connect failed: %s\n", mysqli_connect_error());
-	exit();
-}
+    $user = "root";
+    $pw = "root";
+
+    try {
+        $conn = new PDO('mysql:host=localhost;dbname=db_test', $user, $pw);
+        //var_dump($conn);
+    } catch(PDOException $exception) {
+        echo 'connect error!' . $exception->getMessage();
+    }
 ?>

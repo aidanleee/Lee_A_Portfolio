@@ -9,5 +9,4 @@
 		if($phone === ""){
 			$sendMail = submitMessage($direct, $name, $email, $message);
 		}
-	}
 ?>
